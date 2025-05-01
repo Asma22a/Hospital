@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\EHospital\\HOSPITAL\\Hospital\\Hospital\\Hospital.csproj": {}
+    "C:\\Users\\user\\Desktop\\EHospital\\Hospital\\Hospital\\Hospital.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\EHospital\\HOSPITAL\\Hospital\\Hospital\\Hospital.csproj": {
+    "C:\\Users\\user\\Desktop\\EHospital\\Hospital\\Hospital\\Hospital.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\EHospital\\HOSPITAL\\Hospital\\Hospital\\Hospital.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\EHospital\\Hospital\\Hospital\\Hospital.csproj",
         "projectName": "Hospital",
-        "projectPath": "C:\\Users\\user\\Desktop\\EHospital\\HOSPITAL\\Hospital\\Hospital\\Hospital.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\EHospital\\Hospital\\Hospital\\Hospital.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\EHospital\\HOSPITAL\\Hospital\\Hospital\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\EHospital\\Hospital\\Hospital\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -63,6 +63,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             }
           },
           "imports": [

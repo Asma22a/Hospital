@@ -1,0 +1,71 @@
+﻿
+<div class=" col-md-7 col-lg-12 py-3 m-5">
+    <h1 > Add Doctor </h1>
+    <form method="post" enctype="multipart/form-data">
+        <div class="col-sm-6">
+            <label for="DoctorName" class="form-label">Doctor Name</label>
+            <input type="text" class="form-control" id="DoctorName" name="Name" required>
+            <div class="invalid-feedback">
+                Valid name is required.
+            </div>
+        </div>
+        <div class="col-sm-6 py-3">
+            <label for="Specialization" class="form-label">Specialization</label>
+            @*<input type="text" class="form-control" id="Specialization" name="Specialization" required>*@
+            <select class="form-select" name="Specialization">
+                @foreach (var item in ViewBag.doctors)
+                {
+                    <option>@item.Specialization</option>
+                }
+            </select>
+            
+            <div class="invalid-feedback">
+                Valid Specialization is required.
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label for="Img" class="form-label">Doctor Img</label>
+            <input type="file" class="form-control" id="Img" name="Img" onchange="previewImage(event)" >
+            <img id="imgPreview" src="#" alt="Image Preview" class="img-thumbnail mt-2" style="display: none; max-height: 200px;" />
+        </div>
+
+         <br />
+        <button class="btn btn-primary btn-lg px-lg-5 me-sm-3" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD</button>
+    </form>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Appointment Completed</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                You have successfully added the doctor. :)
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function previewImage(event) {
+        const input = event.target;
+        const preview = document.getElementById('imgPreview');
+
+        if (input.files && input.files[0]) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+                preview.style.display = 'block';
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
